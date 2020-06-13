@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bai5</title>
+</head>
+<body>
+<table cellpadding="100">
+    <tr>
+        <td>
+            <h1>Điểm bài kiểm tra</h1>
+           <label><input type="text" name="kt" id="so1" style="width: 100%;height: 30px"></label>
+        </td>
+        <td>
+            <h1>Điểm thi giữa kỳ</h1>
+            <label><input type="text" name="gk" id="so2" style="width: 100%;height: 30px"></label>
+        </td>
+        <td>
+            <h1>Điểm thi cuối kỳ</h1>
+            <label><input type="text" name="ck" id="so3" style="width: 100%;height: 30px"></label>
+        </td>
+    </tr>
+    <tr>
+        <td colspan="3">
+            <button type="button" id="kq" onclick="Xem()"><h1>XEM</h1></button> <p id="lol"></p>
+        </td>
+    </tr>
+</table>
+<script>
+    function Xem() {
+        let A = +document.getElementById('so1').value;
+        let B = +document.getElementById('so2').value;
+        let C = +document.getElementById('so3').value;
+        if (A>=0&&A<=10&&B>=0&&B<=10&&C>=0&&C<=10){
+            let D =(A+B+C)/3
+            if (D>=0&&D<7){
+                document.getElementById('lol').innerHTML ='Điểm trung bình là : ' +D + ' => Đây là học sinh Trung bình';
+            }else if (D<8.5){
+                document.getElementById('lol').innerHTML ='Điểm trung bình là : ' +D + ' => Đây là học sinh Khá';
+            }else {
+                document.getElementById('lol').innerHTML ='Điểm trung bình là : ' +D + ' => Đây là học sinh Giỏi';
+            }
+        }else {
+            document.getElementById('lol').innerHTML = 'Nhập lại';
+        }
+    }
+</script>
+
+</body>
+</html>

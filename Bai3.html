@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bai3</title>
+</head>
+<body>
+
+<script>
+    let number = +prompt('Nhập vào số nguyên bất kỳ');
+    let numbeR;
+    if (number==0){
+        numbeR = +prompt('nhập lại');
+        if (numbeR>0){
+            alert(numbeR+' là số lớn hơn 0');
+        }else {
+            alert(numbeR+' là số nhỏ hơn 0');
+        }
+    }else if (number>0){
+        alert(number+' là số lớn hơn 0');
+    }else {
+        alert(number+' là số nhỏ hơn 0')
+    }
+</script>
+
+</body>
+</html>
